@@ -26,10 +26,6 @@ public class MatrixOfCrossing {
         int[][] renumberedMatrix = new int[array.length][array.length];
         for (int i = 0; i < hamiltonianCycle.size(); i++) {
             for (int j = 0; j < hamiltonianCycle.size(); j++) {
-                if ((i + 1) % array.length == j || (j + 1) % array.length == i){
-                    renumberedMatrix[i][j] = 0;
-                    continue;
-                }
                 renumberedMatrix[i][j] = array[hamiltonianCycle.get(i)-1][hamiltonianCycle.get(j)-1];
             }
         }
